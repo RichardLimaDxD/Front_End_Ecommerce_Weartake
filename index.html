@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/guide.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>Weartake</title>
+  </head>
+  <body>
+    <header>
+      <h1>Weartake</h1>
+      <nav>
+        <button class="filter__item">Todos</button>
+        <button class="filter__item">Acessórios</button>
+        <button class="filter__item">Calçados</button>
+        <button class="filter__item">Camisetas</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container__sectionListProduct">
+        <ul class="container__listProducts"></ul>
+      </section>
+      <section class="container__sectionCartProduct">
+        <div class="container__searchButtons">
+          <input type="text" placeholder="Digite aqui sua pesquisa" />
+          <button>Pesquisar</button>
+        </div>
+        <section class="container__sectionCart">
+          <ul class="container__cart"></ul>
+          <div class="container__countItensAdd">
+            <h2>Quantidade:</h2>
+            <p class="countItem"></p>
+          </div>
+          <div class="container__totalPrice">
+            <h2>Total:</h2>
+            <p class="totalPrice"></p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./src/javaScript/dataBase.js"></script>
+    <script src="./src/javaScript/index.js"></script>
+  </body>
+</html>
