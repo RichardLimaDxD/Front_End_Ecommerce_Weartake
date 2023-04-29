@@ -4,19 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9eb5a7eb39.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/guide.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="icon" href="./src/assets/icon.png" />
     <title>Weartake</title>
   </head>
   <body>
     <header>
       <h1>Weartake</h1>
-      <nav>
-        <button class="filter__item">Todos</button>
-        <button class="filter__item">Acessórios</button>
-        <button class="filter__item">Calçados</button>
-        <button class="filter__item">Camisetas</button>
+      <input
+        id="input__search"
+        class="input-mobile"
+        type="text"
+        placeholder="Pesquisar..."
+      />
+      <i class="fa-solid fa-bars" id="showMenu"></i>
+      <nav class="container__navMobile" id="menu">
+        <div class="container__mobileCategory">
+          <button class="filter__item"><strong>Todos</strong></button>
+          <button class="filter__item">Acessórios</button>
+          <button class="filter__item">Calçados</button>
+          <button class="filter__item">Camisetas</button>
+        </div>
+      </nav>
+
+      <nav class="container__navDesktop" id="menu">
+        <div class="container__mobileCategory">
+          <button class="filter__item"><strong>Todos</strong></button>
+          <button class="filter__item">Acessórios</button>
+          <button class="filter__item">Calçados</button>
+          <button class="filter__item">Camisetas</button>
+        </div>
       </nav>
     </header>
 
@@ -26,18 +49,27 @@
       </section>
       <section class="container__sectionCartProduct">
         <div class="container__searchButtons">
-          <input type="text" placeholder="Digite aqui sua pesquisa" />
+          <input
+            id="input__search"
+            type="text"
+            placeholder="Digite aqui sua pesquisa"
+          />
           <button>Pesquisar</button>
         </div>
         <section class="container__sectionCart">
-          <ul class="container__cart"></ul>
-          <div class="container__countItensAdd">
-            <h2>Quantidade:</h2>
-            <p class="countItem"></p>
+          <div class="container__divCart">
+            <h2>Carrinho de compras</h2>
           </div>
-          <div class="container__totalPrice">
-            <h2>Total:</h2>
-            <p class="totalPrice"></p>
+          <ul class="container__cart"></ul>
+          <div class="container__valueAndcountCart">
+            <div class="container__countItensAdd">
+              <h2>Quantidade:</h2>
+              <p class="countItem"></p>
+            </div>
+            <div class="container__totalPrice">
+              <h2>Total:</h2>
+              <p class="totalPrice"></p>
+            </div>
           </div>
         </section>
       </section>

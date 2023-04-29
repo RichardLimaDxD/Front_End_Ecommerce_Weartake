@@ -36,6 +36,8 @@ const createProducts = ({
   addToCart.classList.add("buttonCards");
   addToCart.id = `cardsId${id}`;
 
+  tagLi.classList.add("container__itens");
+
   imgItem.src = `./src/${img}`;
   imgItem.alt = "products img";
 
@@ -100,6 +102,8 @@ const sendItemToCart = ({ id, img, nameItem, value }) => {
 
   tagLi.id = id;
 
+  tagLi.classList.add("container__cartItens");
+
   div.classList.add("div__containerCart");
 
   imgItem.src = `./src/${img}`;
@@ -152,14 +156,14 @@ const productFilter = (array, categoryItem) => {
 };
 
 const renderSearch = (array) => {
-  const searchInput = document.querySelector(
-    ".container__searchButtons > input"
-  );
+  const searchInput = document.querySelectorAll("#input__search");
 
-  searchInput.addEventListener("keyup", () => {
-    const productFound = searchProducts(array, searchInput.value);
+  searchInput.forEach((input) => {
+    input.addEventListener("keyup", () => {
+      const productFound = searchProducts(array, input.value);
 
-    renderProducts(productFound);
+      renderProducts(productFound);
+    });
   });
 };
 
@@ -176,6 +180,19 @@ const searchProducts = (array, searchElement) => {
   return productFound;
 };
 
+const showAndHiddenMenuBar = () => {
+  const icon = document.querySelector("#showMenu");
+  const menu = document.querySelector("#menu");
+  icon.addEventListener("click", () => {
+    if (menu.style.display == "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  });
+};
+
 renderProducts(data);
 renderFilter(data);
 renderSearch(data);
+showAndHiddenMenuBar();
